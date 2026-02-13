@@ -1,14 +1,20 @@
 let c = 0;
 
 function inc() {
-    document.getElementById("count").innerHTML = ++c;
+    if (c < 10) {
+        c++;
+        document.getElementById("count").textContent = c;
+    }
 }
 
 function dec() {
-    document.getElementById("count").innerHTML = --c;
+    if (c > 0) {
+        c--;
+        document.getElementById("count").textContent = c;
+    }
 }
 
 function res() {
     c = 0;
-    document.getElementById("count").innerHTML = c;
+    document.getElementById("count").textContent = c;
 }
